@@ -7,7 +7,7 @@ arynama,aryjudul,arytglpinjam,arytglkembali = [],[],[],[]
 
 class perpus:
     def menu(self):
-        print('''
+        st.title('''
         *********************  \033[34mPERPUS PROA DIGITALENT\033[0m  **********************
         **** Sistem Peminjaman Buku Perpustakaan Digital ****
         Pilih Menu :\033[0m
@@ -44,13 +44,13 @@ class perpus:
                 elif(pil==0):
                     time.sleep(0.5)
                     #os.startfile("")
-                    print("\033[34mTerima Kasih, Sampai jumpa kembali.")
+                    st.success("\033[34mTerima Kasih, Sampai jumpa kembali.")
                     quit()
                 else:
-                    print('\033[31mPilihan tidak tersedia\033[0m')
+                    st.error('\033[31mPilihan tidak tersedia\033[0m')
                     pilih.ulang()
             except ValueError:
-                print("Inputan anda salah ! Silahkan ulangi kembali...")
+                st.error("Inputan anda salah ! Silahkan ulangi kembali...")
 
     def ulang(self):
         time.sleep(1)
